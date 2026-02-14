@@ -59,7 +59,7 @@ function Ask({name, onYes}) {
                 brick.style.display = "none";
                 btn.style.display = "block";
                 setStage(4);
-            }, 3000);
+            }, 5000);
             
         }
         if (stage === 4) {
@@ -79,7 +79,7 @@ function Ask({name, onYes}) {
                     btn.textContent = originalText;
                     btn.style.backgroundColor = originalBg;
                     btn.style.color = originalColor;
-                }, 3000);
+                }, 5000);
             }
             setStage(5);
         }
@@ -124,7 +124,7 @@ function Ask({name, onYes}) {
             setTimeout(() => {
                 loadingImg.current.style.display = "None";
                 setStage(8); 
-            }, 5000);
+            }, 10000);
         }
 
         if (stage === 8) {
@@ -182,7 +182,7 @@ function Ask({name, onYes}) {
                 brick.style.display = "none";
                 btn.style.display = "block";
                 setStage(4);
-            }, 3000);
+            }, 5000);
             
         }
         if (stage === 4) {
@@ -202,7 +202,7 @@ function Ask({name, onYes}) {
                     btn.textContent = originalText;
                     btn.style.backgroundColor = originalBg;
                     btn.style.color = originalColor;
-                }, 3000);
+                }, 5000);
             }
             setStage(5);
         }
