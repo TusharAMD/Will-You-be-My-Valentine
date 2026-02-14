@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react'
 import './App.css'
+import Ask from './Ask';
 
 
 function App() {
@@ -33,7 +34,7 @@ function App() {
         <div
           onClick={generateLink}
           className="px-6 py-2 bg-pink-500 text-white font-semibold rounded-lg hover:bg-pink-600 transition"
-        >❤️ Generate ❤️</div>
+        >💗 Generate 💗</div>
         {generatedLink && (
           <div className="mt-4 text-center">
             <p className="text-lg font-medium text-pink-700">Share this link with your crush:</p>
@@ -41,6 +42,14 @@ function App() {
           </div>
         )}
       </div>)
+    }
+    else {
+      return (
+        <div className='App' style={{display:'flex',    flexDirection:'column'}}>
+          
+          <Ask name={name}/>
+        </div>
+      )
     }
 
 }
