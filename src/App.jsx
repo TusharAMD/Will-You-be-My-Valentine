@@ -1,12 +1,18 @@
 import { useState, useEffect } from 'react'
 import './App.css'
 import Ask from './Ask';
-
+import Celebration from './Celebration';
 
 function App() {
   const [name, setName] = useState(null);
   const [recipientName, setRecipientName] = useState("");
   const [generatedLink, setGeneratedLink] = useState("");
+
+  const [yesTriggered, setYesTriggered] = useState(false);
+
+  const handleOnYes = (e) => {
+        setYesTriggered(true);
+      }
 
   const generateLink = () => {
     const currentUrl = window.location.href.split("?")[0];
@@ -45,9 +51,10 @@ function App() {
     }
     else {
       return (
-        <div className='App' style={{display:'flex',    flexDirection:'column'}}>
+        <div className='App' style={{display:'flex', justifyContent:'center',flexDirection:'column'}}>
           
-          <Ask name={name}/>
+          {!yesTriggered && <Ask name={name} onYes={handleOnYes}/>}
+          {yesTriggered && <Celebration name={name} />}
         </div>
       )
     }
